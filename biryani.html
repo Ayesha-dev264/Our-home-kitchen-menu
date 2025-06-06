@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chicken Biryani Details</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Chicken Biryani</h1>
+  </header>
+
+  <section class="menu-item" style="max-width: 700px; margin: auto;">
+    <img src="images/biryani.jpg" alt="Chicken Biryani" />
+    <p><strong>Ingredients:</strong> Basmati rice, chicken, spices, yogurt, mint</p>
+    <p><strong>Serving:</strong> 1 person</p>
+    <p><strong>Spice Level:</strong> Medium</p>
+    <p><strong>Prep Time:</strong> 45 minutes</p>
+    <p><strong>Calories:</strong> ~600</p>
+    <button onclick="orderNow('Chicken Biryani')">Order on WhatsApp</button>
+    <br><br>
+    <a href="index.html">← Back to Menu</a>
+  </section>
+
+  <script>
+    function orderNow(itemName) {
+      const phone = '923339933488'; 
+      const message = `Hi, I'd like to order ${itemName}.`;
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Kitchen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Home Kitchen</h1>
+    <p>Delicious homemade food delivered to your door</p>
+  </header>
+
+  <section class="menu">
+    <h2>Our Menu</h2>
+
+    <div class="menu-item">
+      <img src="images/biryani.jpg" alt="Chicken Biryani" />
+      <h3>Chicken Biryani</h3>
+      <p>Spicy, flavorful biryani cooked with love</p>
+      <span>Rs. 350</span><br>
+      <button onclick="orderNow('Chicken Biryani')">Order on WhatsApp</button>
+      <a href="biryani.html" class="more-info-btn">More Info</a>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/pulao.jpg" alt="Beef Pulao" />
+      <h3>Beef Pulao</h3>
+      <p>Fragrant beef pulao served with raita</p>
+      <span>Rs. 300</span><br>
+      <button onclick="orderNow('Beef Pulao')">Order on WhatsApp</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Home Kitchen. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function orderNow(itemName) {
+  if (confirm(`Ready to chat on WhatsApp to order "${itemName}"?`)) {
+    const phone = '923339933488'; 
+    const message = `Hi, I'd like to order ${itemName}.`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
+}
+
+  </script>
+</body>
+</html>
